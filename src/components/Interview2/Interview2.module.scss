@@ -1,0 +1,364 @@
+@import '../../styles/typography';
+@import '../../styles/vars';
+
+/* General
+----------------------------------------------------------------------------------------------------*/
+
+.root {
+  background: #fff;
+  padding: 0 0 10px 0;
+  @include centeredPage;
+
+  /* Lists
+----------------------------------------------------------------------------------------------------*/
+
+  li {
+    @include articleFont();
+    font-weight: 400;
+    font-size: 18px;
+    @media (max-width: 1000px) {
+      font-size: 16px;
+    }
+  }
+}
+
+.root img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Header
+----------------------------------------------------------------------------------------------------*/
+.header {
+  min-height: calc(100vh - 79px);
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+
+.headerWrapper {
+  @include centeredPage;
+
+  @media (max-width: 1260px) {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  @media (max-width: 768px) {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+}
+
+.header {
+  max-width: 860px;
+  padding: 0;
+  // position: relative;
+}
+
+.header img {
+  max-width: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(80%);
+}
+
+.header h1 {
+  @include baseTitle();
+
+  padding-top: 80px;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #fff;
+  max-width: 70%;
+
+  @media (max-width: 768px) {
+    max-width: initial;
+  }
+}
+
+.header h2 {
+  @include baseDescription();
+  color: #fff;
+
+  @media (max-width: 768px) {
+    margin-top: 5px;
+    margin-bottom: 40px;
+  }
+}
+
+.header > *:not(img) {
+  position: relative;
+  z-index: 10;
+}
+
+.arrowDown {
+  display: block;
+  text-align: center;
+  position: relative;
+  z-index: 15;
+  cursor: pointer;
+}
+
+/* Meta
+----------------------------------------------------------------------------------------------------*/
+
+.meta {
+  margin: 20px 8px 10px 8px;
+  p {
+    @include accentFont;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    strong {
+      @include baseFont;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1;
+      display: inline-block;
+      font-style: normal;
+    }
+  }
+
+  span {
+    display: block;
+
+    @media (max-width: 1000px) {
+      display: inline-block;
+      margin-left: 10px;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .meta {
+    float: left;
+    width: 20%;
+    margin: 0;
+    padding: 15px 50px 0 50px;
+    box-sizing: border-box;
+  }
+}
+
+p.mainTag,
+p.publishDate {
+  @include accentFont;
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-style: normal;
+}
+
+.mainTag,
+.publishDate {
+  margin: 0;
+  color: #9d3dc2;
+}
+
+.mainTag {
+  color: #9d3dc2;
+  padding: 0;
+  a {
+    color: #9d3dc2;
+    text-decoration: none;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+/* Intro
+----------------------------------------------------------------------------------------------------*/
+
+.intro {
+  @include baseFont;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+  padding-bottom: 80px;
+  margin-top: 200px;
+  max-width: 80%;
+  @media (max-width: 786px) {
+    margin-top: 80px;
+    padding-bottom: 30px;
+    font-size: 14px;
+  }
+}
+
+/* Conversation
+----------------------------------------------------------------------------------------------------*/
+
+.conversation {
+  p {
+    @include baseArticle;
+    margin: 15px 0;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+
+  blockquote {
+    color: #9d3dc2;
+    border: none;
+    padding-left: 35px;
+    padding-right: 35px;
+
+    p {
+      @include baseQuote();
+    }
+
+    @media (max-width: 768px) {
+      margin: 0;
+    }
+  }
+
+  strong {
+    @include baseFont;
+    font-weight: bold;
+
+    font-weight: bold;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+
+  em {
+    @include articleFont();
+    font-style: italic;
+    font-size: 18px;
+
+    & > * {
+      @include articleFont();
+    }
+
+    strong {
+      font-weight: bold;
+      color: #000;
+    }
+  }
+
+  img {
+    max-height: 650px;
+    width: 100%;
+    object-fit: contain;
+    background-color: #f2f2f2;
+
+    @media (max-width: 1000px) {
+      max-width: initial;
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      margin-left: -50vw;
+      background-color: #fff;
+    }
+  }
+}
+
+/* Center Col
+----------------------------------------------------------------------------------------------------*/
+.conversation {
+  padding: 0 8px;
+  overflow-x: hidden;
+}
+
+@media (min-width: 1000px) {
+  .conversation {
+    overflow-x: initial;
+    padding: 15px 20% 0 20%;
+  }
+}
+
+/* Person Timeline
+----------------------------------------------------------------------------------------------------*/
+
+.biography {
+  margin: 40px 10%;
+}
+
+@media (min-width: 1000px) {
+  .biography {
+    margin: 40px 20%;
+  }
+}
+
+/* Social Share
+----------------------------------------------------------------------------------------------------*/
+
+.socialShare {
+  text-align: center;
+  margin: 40px 0;
+}
+
+/* Tags
+----------------------------------------------------------------------------------------------------*/
+
+.tags {
+  @include baseFont();
+  margin: 25px 8px;
+}
+
+@media (min-width: 1000px) {
+  .tags {
+    margin: 40px 20%;
+  }
+}
+
+/* Cover
+----------------------------------------------------------------------------------------------------*/
+
+.cover {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  min-height: calc(100vh - 80px);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  position: relative;
+  top: -80px;
+  margin-bottom: -80px;
+  padding-top: 40px;
+
+  &:before,
+  &:after {
+    display: table;
+    content: ' ';
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+/* More
+----------------------------------------------------------------------------------------------------*/
+
+.renderMore {
+  background-color: #f2f2f2;
+}
+
+/* Description to photo
+----------------------------------------------------------------------------------------------------*/
+
+.photoDescription {
+  @include accentFont();
+  font-weight: 400;
+  font-style: italic;
+  flex: 18px;
+  line-height: 1.5;
+}
+
+.hr {
+  margin: 0 20%;
+  border: 0;
+  border-top: thin solid #a0a3a5;
+  @media (max-width: 1000px) {
+    margin: 0 8px;
+  }
+}

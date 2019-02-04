@@ -1,0 +1,91 @@
+@mixin articleFont {
+  font-family: 'Lora', 'Times New Roman', serif;
+}
+
+@mixin baseFont {
+  font-family: 'Rubik', Arial, sans-serif;
+}
+
+@mixin accentFont {
+  font-family: 'Oswald', Arial, sans-serif;
+}
+
+@mixin baseTitle {
+  @include accentFont();
+  position: relative;
+  font-weight: 700;
+  font-size: 40px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  z-index: 10;
+
+  @media (max-width: 768px) {
+    font-size: 32px;
+  }
+}
+
+@mixin secondaryTitle {
+  @include baseFont();
+  font-size: 18px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.4;
+}
+
+@mixin baseDescription {
+  @include accentFont();
+  position: relative;
+  font-weight: 400;
+  font-size: 22px;
+  font-style: italic;
+  line-height: 1.2;
+  z-index: 10;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
+}
+
+@mixin sectionTitle {
+  @include accentFont();
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+  z-index: 10;
+}
+
+@mixin baseTag {
+  @include baseFont();
+  font-size: 12px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+@mixin baseArticle {
+  @include articleFont();
+  font-weight: 400;
+  font-size: 18px;
+}
+
+@mixin interviewLead {
+  @include baseFont();
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+@mixin baseQuote {
+  @include accentFont();
+  font-style: italic;
+  font-weight: 400;
+  font-size: 22px;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+}

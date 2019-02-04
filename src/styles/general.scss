@@ -1,0 +1,148 @@
+@import './typography';
+
+/* General
+----------------------------------------------------------------------------------------------------*/
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  h2 {
+    font-size: 1.25em;
+  }
+}
+
+body {
+  @include baseFont();
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+
+  background: #f2f2f2;
+  // TODO fix global overflow
+  overflow-x: hidden;
+  //TODO СПОРНЫЙ МОМЕНТ
+  min-height: 100vh;
+}
+
+.modal-open {
+  overflow-y: hidden;
+}
+
+/* Gallery
+----------------------------------------------------------------------------------------------------*/
+
+.yo-gallery {
+  margin-left: calc(-33% - 2px);
+  margin-right: calc(-33% - 2px);
+  display: flex;
+  justify-content: space-between;
+
+  img {
+    max-height: initial !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+
+.yo-gallery-2 {
+  display: flex;
+  justify-content: space-between;
+
+  img {
+    width: 49% !important;
+    max-width: initial !important;
+    position: initial !important;
+    left: initial !important;
+    margin-left: initial !important;
+    max-height: initial !important;
+    object-fit: cover !important;
+    height: 100% !important;
+  }
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    img {
+      width: 100% !important;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.yo-gallery-3 {
+  img {
+    width: calc(100% / 3 - 15px) !important;
+  }
+
+  @media (max-width: 1000px) {
+    img {
+      width: 100% !important;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.yo-youtube {
+  margin: 25px 0;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* About page 
+----------------------------------------------------------------------------------------------------*/
+
+.About__vimeo-player {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+
+  iframe,
+  object,
+  embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.leaflet-container {
+  height: 100vh;
+  width: 100%;
+}
+
+/* Lightbox
+----------------------------------------------------------------------------------------------------*/
+
+#lightboxBackdrop {
+  figcaption {
+    @include baseDescription();
+  }
+}
+
+/* Scroll
+----------------------------------------------------------------------------------------------------*/
+
+.swiper-container .active-journal-link {
+  color: red;
+}

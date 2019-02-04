@@ -1,0 +1,69 @@
+@import '../../styles/typography';
+
+.wrapper {
+  position: relative;
+  margin: 20px 0;
+}
+
+.header {
+  background: #fff;
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.footer {
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  fill: red;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.guide {
+  max-width: 50em;
+  margin: auto;
+  position: relative;
+}
+
+.map {
+  position: fixed;
+  z-index: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  @media (max-width: 1000px) {
+    display: none;
+  }
+}
+
+.withMap {
+  @media (min-width: 1000px) {
+    .guide {
+      position: relative;
+      z-index: 50;
+      margin: 0 0 0 20px;
+      width: 712px;
+    }
+  }
+}
+
+.navigation {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 15;
+  padding: 0 25px;
+  background: #fff;
+  border-top: thin solid #c8c8c8;
+  border-bottom: thin solid #c8c8c8;
+  z-index: 90;
+}

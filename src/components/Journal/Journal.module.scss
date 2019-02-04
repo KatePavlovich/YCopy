@@ -1,0 +1,32 @@
+@import "../../styles/vars";
+
+.root {
+  @include centeredPage;
+}
+
+.navigation {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 15;
+  padding: 0 25px;
+  background: #fff;
+  border-top: thin solid #c8c8c8;
+  border-bottom: thin solid #c8c8c8;
+}
+
+.posts {
+  padding-bottom: 20px;
+}
+
+.JournalCover {
+  @media (max-width: 1200px) {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  @media (max-width: 1000px) {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+}

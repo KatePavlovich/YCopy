@@ -1,0 +1,1034 @@
+.SocialShare-module--root--1A8I7 {
+  text-align: center; }
+
+.SocialShare-module--list--2Dupn {
+  margin: 0;
+  padding-left: 0;
+  padding-top: 10px;
+  list-style: none;
+  display: inline-flex;
+  flex-direction: row; }
+
+.SocialShare-module--vertical--VRsRH .SocialShare-module--list--2Dupn {
+  flex-direction: row;
+  padding: 20px 0 0; }
+  @media (min-width: 1000px) {
+    .SocialShare-module--vertical--VRsRH .SocialShare-module--list--2Dupn {
+      flex-direction: column; } }
+
+.SocialShare-module--noIndentation--1C2v0 .SocialShare-module--list--2Dupn {
+  padding: 10px 5px; }
+
+.SocialShare-module--item--3zayY {
+  padding: 8px; }
+
+.SocialShare-module--link--3-a6b {
+  display: block; }
+
+.SocialShare-module--icon--3gVTq {
+  display: block;
+  fill: #7f7f7f;
+  width: 25px !important;
+  height: 25px !important; }
+
+.SocialShare-module--overflowMenu--3HUmK .SocialShare-module--list--2Dupn {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between; }
+
+.SocialShare-module--overflowMenu--3HUmK .SocialShare-module--icon--3gVTq {
+  fill: #000;
+  height: 35px !important;
+  width: 35px !important; }
+  @media (max-width: 768px) {
+    .SocialShare-module--overflowMenu--3HUmK .SocialShare-module--icon--3gVTq {
+      height: 25px !important;
+      width: 25px !important; } }
+
+.SocialShare-module--overflowMenu--3HUmK .SocialShare-module--item--3zayY {
+  padding: 0; }
+
+.SocialShare-module--journalPostVariation--3u102 {
+  border-top: 1px solid #000; }
+
+.About-module--root--37aYf {
+  background: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 50;
+  padding-bottom: 0; }
+  @media (max-width: 1260px) {
+    .About-module--root--37aYf {
+      padding-left: 16px;
+      padding-right: 16px; } }
+  @media (max-width: 768px) {
+    .About-module--root--37aYf {
+      padding-left: 8px;
+      padding-right: 8px; } }
+
+.About-module--title--1ZyL5 {
+  font-family: 'Oswald', Arial, sans-serif;
+  position: relative;
+  font-weight: 700;
+  font-size: 40px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  z-index: 10;
+  color: #333;
+  text-transform: uppercase;
+  border-bottom: 1px solid #333;
+  padding-bottom: 40px;
+  margin-bottom: 20px; }
+  @media (max-width: 768px) {
+    .About-module--title--1ZyL5 {
+      font-size: 32px; } }
+
+.About-module--description--1Jc30 {
+  margin: 0 auto;
+  padding-bottom: 20px; }
+  @media (min-width: 1000px) {
+    .About-module--description--1Jc30 {
+      max-width: 60%; } }
+  .About-module--description--1Jc30 p {
+    margin: 30px 0;
+    font-family: 'Lora', 'Times New Roman', serif;
+    font-weight: 400;
+    font-size: 18px; }
+  .About-module--description--1Jc30 strong {
+    font-family: 'Lora', 'Times New Roman', serif;
+    font-weight: 400;
+    font-size: 18px;
+    font-weight: bold; }
+  .About-module--description--1Jc30 img {
+    width: 100%;
+    height: auto; }
+
+.About-module--renderMore--3Fq7A {
+  background-color: #f2f2f2; }
+
+.Tags-module--root--1-c-F {
+  display: flex;
+  flex-direction: column; }
+  @media (max-width: 768px) {
+    .Tags-module--root--1-c-F {
+      flex-direction: row;
+      align-items: baseline; } }
+
+.Tags-module--title--Nuxd5 {
+  font-family: 'Rubik', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase; }
+
+.Tags-module--list--1fAgn {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  @media (max-width: 768px) {
+    .Tags-module--list--1fAgn {
+      margin-left: 10px; } }
+
+.Tags-module--item--3BIK9,
+.Tags-module--item--3BIK9 a {
+  font-family: 'Rubik', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  display: inline;
+  color: #808080;
+  text-transform: uppercase;
+  text-decoration: none; }
+  .Tags-module--item--3BIK9:hover,
+  .Tags-module--item--3BIK9 a:hover {
+    opacity: 0.8; }
+
+.Tags-module--item--3BIK9:not(:last-child):after {
+  content: ', '; }
+
+.Biography-module--root--1Qb8r {
+  border: 3px solid #9d3dc2;
+  padding: 20px; }
+
+.Biography-module--root--1Qb8r dl {
+  margin: 0; }
+
+.Biography-module--title--1dO1O {
+  font-family: 'Rubik', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #a0a3a5;
+  margin-bottom: 20px; }
+
+.Biography-module--root--1Qb8r dt {
+  font-family: 'Rubik', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 18px; }
+
+.Biography-module--root--1Qb8r dd {
+  font-family: 'Rubik', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  margin: 0;
+  color: #000; }
+
+.Biography-module--root--1Qb8r dl > div + div {
+  margin-top: 20px; }
+
+/* General
+----------------------------------------------------------------------------------------------------*/
+.Interview1-module--root--1EJQ9 {
+  background: #fff;
+  padding: 20px 0;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  /* Lists
+----------------------------------------------------------------------------------------------------*/ }
+  .Interview1-module--root--1EJQ9 li {
+    font-family: 'Lora', 'Times New Roman', serif;
+    font-weight: 400;
+    font-size: 18px; }
+    @media (max-width: 1000px) {
+      .Interview1-module--root--1EJQ9 li {
+        font-size: 16px; } }
+
+.Interview1-module--root--1EJQ9 img {
+  max-width: 100%;
+  max-height: 100%; }
+
+/* Header
+----------------------------------------------------------------------------------------------------*/
+.Interview1-module--header--1IGrZ {
+  overflow-x: hidden; }
+  @media (max-width: 768px) {
+    .Interview1-module--header--1IGrZ {
+      margin-bottom: 20px; } }
+
+.Interview1-module--header--1IGrZ img {
+  width: 100%;
+  max-width: none; }
+
+.Interview1-module--header--1IGrZ h1 {
+  font-family: 'Oswald', Arial, sans-serif;
+  position: relative;
+  font-weight: 700;
+  font-size: 40px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  z-index: 10;
+  color: #000;
+  margin-top: 30px;
+  margin-bottom: 50px; }
+  @media (max-width: 768px) {
+    .Interview1-module--header--1IGrZ h1 {
+      font-size: 32px; } }
+
+/* Meta
+----------------------------------------------------------------------------------------------------*/
+.Interview1-module--meta--2B91C {
+  margin: 20px 8px; }
+  .Interview1-module--meta--2B91C p {
+    font-family: 'Oswald', Arial, sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px; }
+    .Interview1-module--meta--2B91C p strong {
+      font-family: 'Rubik', Arial, sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1;
+      display: inline-block;
+      font-style: normal; }
+  .Interview1-module--meta--2B91C span {
+    display: block; }
+    @media (max-width: 1000px) {
+      .Interview1-module--meta--2B91C span {
+        display: inline-block;
+        margin-left: 10px; } }
+
+@media (min-width: 1000px) {
+  .Interview1-module--meta--2B91C {
+    float: left;
+    width: 20%;
+    margin: 0;
+    padding: 0 50px;
+    box-sizing: border-box; } }
+
+p.Interview1-module--mainTag--17uRj,
+p.Interview1-module--publishDate--3McKU {
+  font-family: 'Oswald', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-style: normal; }
+
+.Interview1-module--mainTag--17uRj,
+.Interview1-module--publishDate--3McKU {
+  margin: 0; }
+
+.Interview1-module--mainTag--17uRj {
+  padding: 0;
+  color: #9d3dc2; }
+  .Interview1-module--mainTag--17uRj a {
+    color: #9d3dc2;
+    text-decoration: none; }
+    .Interview1-module--mainTag--17uRj a:hover {
+      opacity: 0.8; }
+
+/* Intro
+----------------------------------------------------------------------------------------------------*/
+.Interview1-module--intro--2Q7pc {
+  font-family: 'Rubik', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #9d3dc2;
+  padding-bottom: 30px;
+  margin: 30px 8px;
+  border-bottom: 3px solid; }
+  @media (max-width: 768px) {
+    .Interview1-module--intro--2Q7pc {
+      font-size: 14px; } }
+
+@media (min-width: 1000px) {
+  .Interview1-module--intro--2Q7pc {
+    margin: 15px 20% 0 20%; } }
+
+/* Conversation
+----------------------------------------------------------------------------------------------------*/
+.Interview1-module--conversation--1jLx2 p,
+.Interview1-module--conversation--1jLx2 blockquote {
+  margin: 30px 0; }
+
+.Interview1-module--conversation--1jLx2 p {
+  font-family: 'Lora', 'Times New Roman', serif;
+  font-weight: 400;
+  font-size: 18px; }
+  @media (max-width: 768px) {
+    .Interview1-module--conversation--1jLx2 p {
+      font-size: 16px;
+      margin: 14px 0; } }
+
+.Interview1-module--conversation--1jLx2 blockquote {
+  color: #9d3dc2;
+  border: none;
+  padding-left: 35px;
+  padding-right: 35px;
+  margin-top: -10px;
+  margin-bottom: -10px; }
+  @media (max-width: 768px) {
+    .Interview1-module--conversation--1jLx2 blockquote {
+      margin: 0; } }
+
+.Interview1-module--conversation--1jLx2 blockquote p {
+  font-family: 'Oswald', Arial, sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 22px; }
+  @media (max-width: 768px) {
+    .Interview1-module--conversation--1jLx2 blockquote p {
+      font-size: 18px; } }
+
+.Interview1-module--conversation--1jLx2 strong {
+  font-family: 'Rubik', Arial, sans-serif;
+  font-weight: bold; }
+  @media (max-width: 768px) {
+    .Interview1-module--conversation--1jLx2 strong {
+      font-size: 16px; } }
+
+.Interview1-module--conversation--1jLx2 em {
+  font-family: 'Lora', 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 18px; }
+  .Interview1-module--conversation--1jLx2 em > * {
+    font-family: 'Lora', 'Times New Roman', serif; }
+  .Interview1-module--conversation--1jLx2 em strong {
+    font-weight: bold;
+    color: #000; }
+
+.Interview1-module--conversation--1jLx2 img {
+  max-height: 650px;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-color: #f2f2f2; }
+  @media (max-width: 1000px) {
+    .Interview1-module--conversation--1jLx2 img {
+      max-width: initial;
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      margin-left: -50vw;
+      background-color: #fff; } }
+
+/* Center Col
+----------------------------------------------------------------------------------------------------*/
+.Interview1-module--header--1IGrZ,
+.Interview1-module--conversation--1jLx2 {
+  padding: 0 8px; }
+
+.Interview1-module--header--1IGrZ img,
+.Interview1-module--conversation--1jLx2 .yo-gallery {
+  margin-left: calc(-10 / 8 * 10%);
+  width: calc(10 / 8 * 100%); }
+
+@media (min-width: 1000px) {
+  .Interview1-module--header--1IGrZ,
+  .Interview1-module--conversation--1jLx2 {
+    padding: 0 20%; }
+  .Interview1-module--header--1IGrZ img,
+  .Interview1-module--conversation--1jLx2 .yo-gallery {
+    margin-left: calc(-10 / 6 * 20%);
+    width: calc(10 / 6 * 100%); } }
+
+/* Person Timeline
+----------------------------------------------------------------------------------------------------*/
+.Interview1-module--biography--3NoV0 {
+  margin: 40px 10%; }
+
+@media (min-width: 1000px) {
+  .Interview1-module--biography--3NoV0 {
+    margin: 40px 20%; } }
+
+/* Social Share
+----------------------------------------------------------------------------------------------------*/
+.Interview1-module--socialShare--1Yr0V {
+  text-align: center;
+  margin: 40px 0; }
+
+/* Tags
+----------------------------------------------------------------------------------------------------*/
+.Interview1-module--tags--1bfvk {
+  font-family: 'Rubik', Arial, sans-serif;
+  margin: 25px 8px; }
+
+@media (min-width: 1000px) {
+  .Interview1-module--tags--1bfvk {
+    margin: 40px 20%; } }
+
+/* More
+----------------------------------------------------------------------------------------------------*/
+.Interview1-module--renderMore--3sUrg {
+  background-color: #f2f2f2; }
+
+/* Description to photo
+----------------------------------------------------------------------------------------------------*/
+.Interview1-module--photoDescription--3j6ZB {
+  font-family: 'Oswald', Arial, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  flex: 18px 1;
+  line-height: 1.5; }
+
+.Interview1-module--hr--3Ztha {
+  margin: 0 20%;
+  border: 0;
+  border-top: thin solid #a0a3a5; }
+  @media (max-width: 1000px) {
+    .Interview1-module--hr--3Ztha {
+      margin: 0 8px; } }
+
+/* General
+----------------------------------------------------------------------------------------------------*/
+.Interview2-module--root--2CGlP {
+  background: #fff;
+  padding: 0 0 10px 0;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  /* Lists
+----------------------------------------------------------------------------------------------------*/ }
+  .Interview2-module--root--2CGlP li {
+    font-family: 'Lora', 'Times New Roman', serif;
+    font-weight: 400;
+    font-size: 18px; }
+    @media (max-width: 1000px) {
+      .Interview2-module--root--2CGlP li {
+        font-size: 16px; } }
+
+.Interview2-module--root--2CGlP img {
+  max-width: 100%;
+  max-height: 100%; }
+
+/* Header
+----------------------------------------------------------------------------------------------------*/
+.Interview2-module--header--3jGC1 {
+  min-height: calc(100vh - 79px);
+  height: auto;
+  display: flex;
+  align-items: center; }
+
+.Interview2-module--headerWrapper--2tnVr {
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto; }
+  @media (max-width: 1260px) {
+    .Interview2-module--headerWrapper--2tnVr {
+      margin-left: 16px;
+      margin-right: 16px; } }
+  @media (max-width: 768px) {
+    .Interview2-module--headerWrapper--2tnVr {
+      margin-left: 8px;
+      margin-right: 8px; } }
+
+.Interview2-module--header--3jGC1 {
+  max-width: 860px;
+  padding: 0; }
+
+.Interview2-module--header--3jGC1 img {
+  max-width: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%); }
+
+.Interview2-module--header--3jGC1 h1 {
+  font-family: 'Oswald', Arial, sans-serif;
+  position: relative;
+  font-weight: 700;
+  font-size: 40px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  z-index: 10;
+  padding-top: 80px;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #fff;
+  max-width: 70%; }
+  @media (max-width: 768px) {
+    .Interview2-module--header--3jGC1 h1 {
+      font-size: 32px; } }
+  @media (max-width: 768px) {
+    .Interview2-module--header--3jGC1 h1 {
+      max-width: initial; } }
+
+.Interview2-module--header--3jGC1 h2 {
+  font-family: 'Oswald', Arial, sans-serif;
+  position: relative;
+  font-weight: 400;
+  font-size: 22px;
+  font-style: italic;
+  line-height: 1.2;
+  z-index: 10;
+  color: #fff; }
+  @media (max-width: 768px) {
+    .Interview2-module--header--3jGC1 h2 {
+      font-size: 20px; } }
+  @media (max-width: 768px) {
+    .Interview2-module--header--3jGC1 h2 {
+      margin-top: 5px;
+      margin-bottom: 40px; } }
+
+.Interview2-module--header--3jGC1 > *:not(img) {
+  position: relative;
+  z-index: 10; }
+
+.Interview2-module--arrowDown--10NPO {
+  display: block;
+  text-align: center;
+  position: relative;
+  z-index: 15;
+  cursor: pointer; }
+
+/* Meta
+----------------------------------------------------------------------------------------------------*/
+.Interview2-module--meta--KIQuL {
+  margin: 20px 8px 10px 8px; }
+  .Interview2-module--meta--KIQuL p {
+    font-family: 'Oswald', Arial, sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px; }
+    .Interview2-module--meta--KIQuL p strong {
+      font-family: 'Rubik', Arial, sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1;
+      display: inline-block;
+      font-style: normal; }
+  .Interview2-module--meta--KIQuL span {
+    display: block; }
+    @media (max-width: 1000px) {
+      .Interview2-module--meta--KIQuL span {
+        display: inline-block;
+        margin-left: 10px; } }
+
+@media (min-width: 1000px) {
+  .Interview2-module--meta--KIQuL {
+    float: left;
+    width: 20%;
+    margin: 0;
+    padding: 15px 50px 0 50px;
+    box-sizing: border-box; } }
+
+p.Interview2-module--mainTag--1Yfrx,
+p.Interview2-module--publishDate--1_fhH {
+  font-family: 'Oswald', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-style: normal; }
+
+.Interview2-module--mainTag--1Yfrx,
+.Interview2-module--publishDate--1_fhH {
+  margin: 0;
+  color: #9d3dc2; }
+
+.Interview2-module--mainTag--1Yfrx {
+  color: #9d3dc2;
+  padding: 0; }
+  .Interview2-module--mainTag--1Yfrx a {
+    color: #9d3dc2;
+    text-decoration: none; }
+    .Interview2-module--mainTag--1Yfrx a:hover {
+      opacity: 0.8; }
+
+/* Intro
+----------------------------------------------------------------------------------------------------*/
+.Interview2-module--intro--37CLf {
+  font-family: 'Rubik', Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+  padding-bottom: 80px;
+  margin-top: 200px;
+  max-width: 80%; }
+  @media (max-width: 786px) {
+    .Interview2-module--intro--37CLf {
+      margin-top: 80px;
+      padding-bottom: 30px;
+      font-size: 14px; } }
+
+/* Conversation
+----------------------------------------------------------------------------------------------------*/
+.Interview2-module--conversation--ehbNU p {
+  font-family: 'Lora', 'Times New Roman', serif;
+  font-weight: 400;
+  font-size: 18px;
+  margin: 15px 0; }
+  @media (max-width: 768px) {
+    .Interview2-module--conversation--ehbNU p {
+      font-size: 16px; } }
+
+.Interview2-module--conversation--ehbNU blockquote {
+  color: #9d3dc2;
+  border: none;
+  padding-left: 35px;
+  padding-right: 35px; }
+  .Interview2-module--conversation--ehbNU blockquote p {
+    font-family: 'Oswald', Arial, sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 22px; }
+    @media (max-width: 768px) {
+      .Interview2-module--conversation--ehbNU blockquote p {
+        font-size: 18px; } }
+  @media (max-width: 768px) {
+    .Interview2-module--conversation--ehbNU blockquote {
+      margin: 0; } }
+
+.Interview2-module--conversation--ehbNU strong {
+  font-family: 'Rubik', Arial, sans-serif;
+  font-weight: bold;
+  font-weight: bold; }
+  @media (max-width: 768px) {
+    .Interview2-module--conversation--ehbNU strong {
+      font-size: 16px; } }
+
+.Interview2-module--conversation--ehbNU em {
+  font-family: 'Lora', 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 18px; }
+  .Interview2-module--conversation--ehbNU em > * {
+    font-family: 'Lora', 'Times New Roman', serif; }
+  .Interview2-module--conversation--ehbNU em strong {
+    font-weight: bold;
+    color: #000; }
+
+.Interview2-module--conversation--ehbNU img {
+  max-height: 650px;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-color: #f2f2f2; }
+  @media (max-width: 1000px) {
+    .Interview2-module--conversation--ehbNU img {
+      max-width: initial;
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      margin-left: -50vw;
+      background-color: #fff; } }
+
+/* Center Col
+----------------------------------------------------------------------------------------------------*/
+.Interview2-module--conversation--ehbNU {
+  padding: 0 8px;
+  overflow-x: hidden; }
+
+@media (min-width: 1000px) {
+  .Interview2-module--conversation--ehbNU {
+    overflow-x: initial;
+    padding: 15px 20% 0 20%; } }
+
+/* Person Timeline
+----------------------------------------------------------------------------------------------------*/
+.Interview2-module--biography--JdCDX {
+  margin: 40px 10%; }
+
+@media (min-width: 1000px) {
+  .Interview2-module--biography--JdCDX {
+    margin: 40px 20%; } }
+
+/* Social Share
+----------------------------------------------------------------------------------------------------*/
+.Interview2-module--socialShare--2elop {
+  text-align: center;
+  margin: 40px 0; }
+
+/* Tags
+----------------------------------------------------------------------------------------------------*/
+.Interview2-module--tags--1em25 {
+  font-family: 'Rubik', Arial, sans-serif;
+  margin: 25px 8px; }
+
+@media (min-width: 1000px) {
+  .Interview2-module--tags--1em25 {
+    margin: 40px 20%; } }
+
+/* Cover
+----------------------------------------------------------------------------------------------------*/
+.Interview2-module--cover--1Bf7G {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  min-height: calc(100vh - 80px);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  position: relative;
+  top: -80px;
+  margin-bottom: -80px;
+  padding-top: 40px; }
+  .Interview2-module--cover--1Bf7G:before, .Interview2-module--cover--1Bf7G:after {
+    display: table;
+    content: ' '; }
+  .Interview2-module--cover--1Bf7G:after {
+    clear: both; }
+
+/* More
+----------------------------------------------------------------------------------------------------*/
+.Interview2-module--renderMore--3fuBB {
+  background-color: #f2f2f2; }
+
+/* Description to photo
+----------------------------------------------------------------------------------------------------*/
+.Interview2-module--photoDescription--Qzayl {
+  font-family: 'Oswald', Arial, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  flex: 18px 1;
+  line-height: 1.5; }
+
+.Interview2-module--hr--2Gnvd {
+  margin: 0 20%;
+  border: 0;
+  border-top: thin solid #a0a3a5; }
+  @media (max-width: 1000px) {
+    .Interview2-module--hr--2Gnvd {
+      margin: 0 8px; } }
+
+/* General
+----------------------------------------------------------------------------------------------------*/
+.Interview3-module--root--2_-Vw {
+  background: #fff;
+  padding: 20px 0;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  /* Lists
+----------------------------------------------------------------------------------------------------*/ }
+  .Interview3-module--root--2_-Vw li {
+    font-family: 'Lora', 'Times New Roman', serif;
+    font-weight: 400;
+    font-size: 18px; }
+    @media (max-width: 1000px) {
+      .Interview3-module--root--2_-Vw li {
+        font-size: 16px; } }
+
+.Interview3-module--root--2_-Vw img {
+  max-width: 100%;
+  max-height: 100%; }
+
+/* Header
+----------------------------------------------------------------------------------------------------*/
+.Interview3-module--header--1QOCG {
+  margin-bottom: 40px; }
+
+.Interview3-module--header--1QOCG img {
+  width: 100%;
+  max-width: none; }
+
+.Interview3-module--header--1QOCG h1 {
+  font-family: 'Oswald', Arial, sans-serif;
+  position: relative;
+  font-weight: 700;
+  font-size: 40px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  z-index: 10;
+  color: #000;
+  padding: 0 0 40px 0;
+  margin-top: 20px;
+  border-bottom: 2px solid #a0a3a5; }
+  @media (max-width: 768px) {
+    .Interview3-module--header--1QOCG h1 {
+      font-size: 32px; } }
+
+/* Meta
+----------------------------------------------------------------------------------------------------*/
+.Interview3-module--meta--3Xncl {
+  margin: 20px 8px; }
+  .Interview3-module--meta--3Xncl p {
+    font-family: 'Oswald', Arial, sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px; }
+    .Interview3-module--meta--3Xncl p strong {
+      font-family: 'Rubik', Arial, sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1;
+      display: inline-block;
+      font-style: normal; }
+  .Interview3-module--meta--3Xncl span {
+    display: block; }
+    @media (max-width: 998px) {
+      .Interview3-module--meta--3Xncl span {
+        display: inline-block;
+        margin-left: 10px; } }
+
+@media (min-width: 1000px) {
+  .Interview3-module--meta--3Xncl {
+    float: left;
+    width: 20%;
+    margin: 15px 0 0 0;
+    padding: 0 50px;
+    box-sizing: border-box; } }
+
+p.Interview3-module--mainTag--Edrnn,
+p.Interview3-module--publishDate--3BHOr {
+  font-family: 'Oswald', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-style: normal; }
+
+.Interview3-module--mainTag--Edrnn,
+.Interview3-module--publishDate--3BHOr {
+  margin: 0; }
+
+.Interview3-module--mainTag--Edrnn {
+  color: #9d3dc2;
+  padding: 0; }
+  .Interview3-module--mainTag--Edrnn a {
+    color: #9d3dc2;
+    text-decoration: none; }
+    .Interview3-module--mainTag--Edrnn a:hover {
+      opacity: 0.8; }
+
+/* Intro
+----------------------------------------------------------------------------------------------------*/
+.Interview3-module--intro--KMsNx {
+  font-family: 'Rubik', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #ab2dc9;
+  border-bottom: 2px solid #ab2dc9;
+  padding-bottom: 20px;
+  margin: 30px 8px; }
+  .Interview3-module--intro--KMsNx:after {
+    content: '';
+    display: block; }
+  @media (max-width: 768px) {
+    .Interview3-module--intro--KMsNx {
+      font-size: 14px; } }
+
+@media (min-width: 1000px) {
+  .Interview3-module--intro--KMsNx {
+    margin: 0 20%;
+    margin-top: -15px; } }
+
+/* Conversation
+----------------------------------------------------------------------------------------------------*/
+.Interview3-module--conversation--1goyN p,
+.Interview3-module--conversation--1goyN blockquote {
+  margin: 30px 0; }
+
+.Interview3-module--conversation--1goyN p {
+  font-family: 'Lora', 'Times New Roman', serif;
+  font-weight: 400;
+  font-size: 18px; }
+  @media (max-width: 768px) {
+    .Interview3-module--conversation--1goyN p {
+      font-size: 16px;
+      margin: 14px 0; } }
+
+.Interview3-module--conversation--1goyN blockquote {
+  color: #9d3dc2;
+  border: none;
+  padding-left: 35px;
+  padding-right: 35px;
+  margin-top: -10px;
+  margin-bottom: -10px; }
+  @media (max-width: 768px) {
+    .Interview3-module--conversation--1goyN blockquote {
+      margin: 0; } }
+
+.Interview3-module--conversation--1goyN blockquote p {
+  font-family: 'Oswald', Arial, sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 22px; }
+  @media (max-width: 768px) {
+    .Interview3-module--conversation--1goyN blockquote p {
+      font-size: 18px; } }
+
+.Interview3-module--conversation--1goyN strong {
+  font-family: 'Rubik', Arial, sans-serif;
+  font-weight: bold; }
+  @media (max-width: 768px) {
+    .Interview3-module--conversation--1goyN strong {
+      font-size: 16px; } }
+
+.Interview3-module--conversation--1goyN em {
+  font-family: 'Lora', 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 18px; }
+  .Interview3-module--conversation--1goyN em > * {
+    font-family: 'Lora', 'Times New Roman', serif; }
+  .Interview3-module--conversation--1goyN em strong {
+    font-weight: bold;
+    color: #000; }
+
+.Interview3-module--conversation--1goyN img {
+  max-height: 650px;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-color: #f2f2f2; }
+  @media (max-width: 1000px) {
+    .Interview3-module--conversation--1goyN img {
+      max-width: initial;
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      margin-left: -50vw;
+      background-color: #fff; } }
+
+/* Center Col
+----------------------------------------------------------------------------------------------------*/
+.Interview3-module--header--1QOCG,
+.Interview3-module--conversation--1goyN {
+  padding: 0 8px; }
+
+.Interview3-module--header--1QOCG img,
+.Interview3-module--conversation--1goyN .yo-gallery {
+  margin-left: calc(-10 / 8 * 10%);
+  width: calc(10 / 8 * 100%); }
+
+@media (min-width: 1000px) {
+  .Interview3-module--header--1QOCG,
+  .Interview3-module--conversation--1goyN {
+    padding: 0 20%; }
+  .Interview3-module--header--1QOCG img,
+  .Interview3-module--conversation--1goyN .yo-gallery {
+    margin-left: calc(-10 / 6 * 20%);
+    width: calc(10 / 6 * 100%); } }
+
+.yo-image {
+  background-color: #f2f2f2; }
+  .yo-image figure img {
+    display: block;
+    margin: auto;
+    max-height: 500px;
+    width: auto; }
+  @media (max-width: 589px) {
+    .yo-image figure img {
+      height: auto;
+      max-width: 100%; } }
+
+.yo-gallery figure {
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .yo-gallery figure img {
+    display: block;
+    margin: auto;
+    max-height: 500px;
+    width: 100%; }
+
+/* Person Timeline
+----------------------------------------------------------------------------------------------------*/
+.Interview3-module--biography--o9FkR {
+  margin: 40px 10%; }
+
+@media (min-width: 1000px) {
+  .Interview3-module--biography--o9FkR {
+    margin: 40px 20%; } }
+
+/* Tags
+----------------------------------------------------------------------------------------------------*/
+.Interview3-module--tags--f1hL8 {
+  font-family: 'Rubik', Arial, sans-serif;
+  margin: 25px 8px; }
+
+@media (min-width: 1000px) {
+  .Interview3-module--tags--f1hL8 {
+    margin: 40px 20%; } }
+
+/* More
+----------------------------------------------------------------------------------------------------*/
+.Interview3-module--insertedContent--eC-nd {
+  background-color: #f2f2f2; }
+  .Interview3-module--insertedContent--eC-nd section {
+    box-shadow: none;
+    background-color: #f2f2f2;
+    padding-top: 20px; }
+  .Interview3-module--insertedContent--eC-nd header {
+    margin-bottom: -10px; }
+    .Interview3-module--insertedContent--eC-nd header h1 {
+      margin-top: 0;
+      margin-bottom: 15px; }
+
+/* Description to photo
+----------------------------------------------------------------------------------------------------*/
+.Interview3-module--photoDescription--3ZfyL {
+  font-family: 'Oswald', Arial, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  flex: 18px 1;
+  line-height: 1.5; }
+
+.Interview3-module--hr--30KIU {
+  margin: 0 20%;
+  border: 0;
+  border-top: thin solid #a0a3a5; }
+  @media (max-width: 1000px) {
+    .Interview3-module--hr--30KIU {
+      margin: 0 8px; } }
+
+
+/*# sourceMappingURL=cms.css.map*/

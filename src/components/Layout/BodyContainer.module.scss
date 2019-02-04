@@ -1,0 +1,9 @@
+@import '../../styles/vars';
+
+.variant1 {
+  @include centeredPage;
+
+  position: relative;
+  z-index: 5;
+  padding-bottom: 80px;
+}

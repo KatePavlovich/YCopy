@@ -1,0 +1,51 @@
+@import '../../styles/typography';
+
+.root {
+  margin-top: 10px;
+  border: 1px solid #7f7f7f;
+  border-bottom: 2px solid red;
+  background: #fff;
+
+  h1 {
+    @include baseTitle();
+    padding: 10px;
+    margin: 0;
+    border-bottom: 1px solid #7f7f7f;
+  }
+
+  @media (max-width: 1000px) {
+    border-left: 0;
+    border-right: 0;
+  }
+}
+
+.story {
+  img {
+    max-width: 100%;
+  }
+
+  p {
+    @include baseFont;
+    font-weight: 400;
+    font-size: 18px;
+    margin: 10px 0;
+    padding: 0 10px;
+    &:first-child {
+      margin-top: 0;
+    }
+
+    img {
+      width: calc(100% + 20px);
+      max-width: none;
+      margin-left: -10px;
+      padding: 0;
+      display: block;
+    }
+  }
+
+  @media (max-width: 768px) {
+    p {
+      font-size: 16px;
+    }
+  }
+}

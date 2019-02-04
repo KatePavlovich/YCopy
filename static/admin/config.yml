@@ -1,0 +1,567 @@
+backend:
+  name: github
+  repo: humanseelabs/yolife.is
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: 'tags'
+    label: 'Tags'
+    folder: 'src/data/tags'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'Tag' }
+      - { label: 'Description', name: 'description', widget: 'text' }
+      - { label: 'Keywords', name: 'keywords', widget: 'string' }
+      - { label: 'Priority', name: 'priority', widget: 'number' }
+      - { label: 'Slides Per View', name: 'slidesPerView', widget: 'number', default: 2 }
+      - label: 'Color'
+        name: 'color'
+        widget: 'string'
+        options: ['black', 'red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
+        default: 'black'
+  - name: 'projects'
+    label: 'Projects'
+    folder: 'src/data/projects'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'Project' }
+      - { label: 'Description', name: 'description', widget: 'text' }
+      - { label: 'Background', name: 'background', widget: 'image' }
+      - { label: 'Logo', name: 'logo', widget: 'image', required: false }
+      - { label: 'Slides Per Cover', name: 'slidesPerCover', widget: 'number', default: 2 }
+      - { label: 'Video Background', name: 'isVideoBackgroundEnable', widget: 'boolean', default: false }
+      - { label: 'Decoration', name: 'isDecorationEnable', widget: 'boolean', default: false }
+      - label: 'Tag'
+        name: 'tag'
+        widget: 'relation'
+        collection: 'tags'
+        searchFields: ['title', 'description']
+        valueField: 'title'
+        displayFields: ['title', 'description']
+  - name: 'guides'
+    label: 'Guides'
+    folder: 'src/data/guides'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'Guide' }
+      - { label: 'Is Published', name: 'isPublished', widget: 'boolean', default: false }
+      - { label: 'Description', name: 'description', widget: 'text' }
+      - { label: 'Priority', name: 'priority', widget: 'number' }
+      - { label: 'Longitude', name: 'longitude', widget: 'number', valueType: 'float', default: 27.54684448492185 }
+      - { label: 'Latitude', name: 'latitude', widget: 'number', valueType: 'float', default: 53.90431258248743 }
+      - { label: 'Zoom', name: 'zoom', widget: 'number', default: 14 }
+      - label: 'Icon'
+        name: 'icon'
+        widget: 'image'
+        required: false
+      - { label: 'Image', name: 'image', widget: 'image', required: false }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Guide Posts'
+        name: 'guidePosts'
+        widget: 'list'
+        fields:
+          - label: 'Guide Post'
+            name: 'guidePost'
+            widget: 'relation'
+            collection: 'guidePosts'
+            searchFields: ['title', 'description']
+            valueField: 'title'
+            displayFields: ['title']
+  - name: 'guidePosts'
+    label: 'Guide Posts'
+    folder: 'src/data/guidePosts'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'GuidePost' }
+      - { label: 'Image', name: 'image', widget: 'image', required: false }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Longitude', name: 'longitude', widget: 'number', valueType: 'float' }
+      - { label: 'Latitude', name: 'latitude', widget: 'number', valueType: 'float' }
+  - name: 'journalSets'
+    label: 'Journal Sets'
+    folder: 'src/data/journalSets'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'JournalSet' }
+      - { label: 'Description', name: 'description', widget: 'text' }
+  - name: 'journalPosts'
+    label: 'Journal Posts'
+    folder: 'src/data/journalPosts'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'JournalPost' }
+      - { label: 'Persona', name: 'persona', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'text' }
+      - { label: 'Image', name: 'image', widget: 'image', required: false }
+      - { label: 'Author', name: 'author', widget: 'string' }
+      - { label: 'Photographer', name: 'photographer', widget: 'string', required: false }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Footnote', name: 'footnote', widget: 'text', required: false }
+  - name: 'journals'
+    label: 'Journals'
+    folder: 'src/data/journals'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'Journal' }
+      - { label: 'Is Published', name: 'isPublished', widget: 'boolean', default: false }
+      - { label: 'Description', name: 'description', widget: 'text' }
+      - { label: 'Label', name: 'label', widget: 'text' }
+      - { label: 'Background', name: 'background', widget: 'image' }
+      - label: 'Journal Set'
+        name: 'journalSet'
+        widget: 'relation'
+        collection: 'journalSets'
+        searchFields: ['title']
+        valueField: 'title'
+        displayFields: ['title']
+      - label: 'Journal Posts'
+        name: 'journalPosts'
+        widget: 'list'
+        fields:
+          - label: 'Journal Post'
+            name: 'journalPost'
+            widget: 'relation'
+            collection: 'journalPosts'
+            searchFields: ['title']
+            valueField: 'title'
+            displayFields: ['title']
+      - label: 'SEO'
+        name: 'seo'
+        widget: 'object'
+        fields:
+          - { label: 'Description', name: 'description', widget: 'string', default: '' }
+          - { label: 'Keywords', name: 'keywords', widget: 'string', default: '' }
+      - label: 'Color'
+        name: 'color'
+        widget: 'select'
+        options: ['white', 'black', 'blue', 'green', 'yellow', 'purple']
+        default: 'white'
+      - label: 'Cover style'
+        name: 'style'
+        widget: 'select'
+        options: ['white', 'red']
+        default: 'white'
+  - name: 'channels'
+    label: 'Channels'
+    folder: 'src/data/channels/'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'Channel' }
+      - { label: 'Priority', name: 'priority', widget: 'number' }
+      - label: 'Videos'
+        name: 'videos'
+        widget: 'list'
+        fields:
+          - label: 'Title'
+            name: 'title'
+            widget: 'string'
+          - label: 'Url'
+            name: 'url'
+            widget: 'string'
+          - label: 'Duration'
+            name: 'duration'
+            widget: 'string'
+  - name: 'interview1'
+    label: 'Interview 1'
+    folder: 'src/data/posts/interview1'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'Interview1' }
+      - { label: 'Is Published', name: 'isPublished', widget: 'boolean', default: false }
+      - { label: 'Icon', name: 'icon', widget: 'image', required: false }
+      - { label: 'Publish Date', name: 'publishDate', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'text', required: false }
+      - { label: 'Is Show Description In Teaser', name: 'isShowDescriptionInTeaser', widget: 'boolean', default: false }
+      - { label: 'Lead', name: 'lead', widget: 'text' }
+      - { label: 'Author', name: 'author', widget: 'string' }
+      - { label: 'Photographer', name: 'photographer', widget: 'string', required: false }
+      - { label: 'Illustrator', name: 'illustrator', widget: 'string', required: false }
+      - { label: 'Image', name: 'image', widget: 'image', required: false }
+      - label: 'Tags'
+        name: 'tags'
+        widget: 'list'
+        fields:
+          - label: 'Tag'
+            name: 'tag'
+            widget: 'relation'
+            collection: 'tags'
+            searchFields: ['title', 'description']
+            valueField: 'title'
+            displayFields: ['title']
+      - label: 'Main tag'
+        name: 'mainTag'
+        widget: 'relation'
+        collection: 'tags'
+        searchFields: ['title', 'description']
+        valueField: 'title'
+        displayFields: ['title', 'description']
+      - label: 'SEO'
+        name: 'seo'
+        widget: 'object'
+        fields:
+          - { label: 'Description', name: 'description', widget: 'string', default: '' }
+          - { label: 'Keywords', name: 'keywords', widget: 'string', default: '' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Biography'
+        name: 'biography'
+        widget: 'object'
+        required: false
+        fields:
+          - { label: 'Title', name: 'title', widget: 'text' }
+          - label: 'Events'
+            name: 'events'
+            widget: 'list'
+            fields:
+              - { label: 'Year', name: 'year', widget: 'number' }
+              - { label: 'Event', name: 'event', widget: 'text' }
+  - name: 'interview2'
+    label: 'Interview 2'
+    folder: 'src/data/posts/interview2'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'Interview2' }
+      - { label: 'Is Published', name: 'isPublished', widget: 'boolean', default: false }
+      - { label: 'Icon', name: 'icon', widget: 'image', required: false }
+      - { label: 'Publish Date', name: 'publishDate', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'text', required: false }
+      - { label: 'Is Show Description In Teaser', name: 'isShowDescriptionInTeaser', widget: 'boolean', default: false }
+      - { label: 'Lead', name: 'lead', widget: 'text' }
+      - { label: 'Author', name: 'author', widget: 'string' }
+      - { label: 'Photographer', name: 'photographer', widget: 'string', required: false }
+      - { label: 'Illustrator', name: 'illustrator', widget: 'string', required: false }
+      - { label: 'Image', name: 'image', widget: 'image', required: false }
+      - label: 'Tags'
+        name: 'tags'
+        widget: 'list'
+        fields:
+          - label: 'Tag'
+            name: 'tag'
+            widget: 'relation'
+            collection: 'tags'
+            searchFields: ['title', 'description']
+            valueField: 'title'
+            displayFields: ['title']
+      - label: 'Main tag'
+        name: 'mainTag'
+        widget: 'relation'
+        collection: 'tags'
+        searchFields: ['title', 'description']
+        valueField: 'title'
+        displayFields: ['title', 'description']
+      - label: 'SEO'
+        name: 'seo'
+        widget: 'object'
+        fields:
+          - { label: 'Description', name: 'description', widget: 'string', default: '' }
+          - { label: 'Keywords', name: 'keywords', widget: 'string', default: '' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Biography'
+        name: 'biography'
+        widget: 'object'
+        required: false
+        fields:
+          - { label: 'Title', name: 'title', widget: 'text' }
+          - label: 'Events'
+            name: 'events'
+            widget: 'list'
+            fields:
+              - { label: 'Year', name: 'year', widget: 'number' }
+              - { label: 'Event', name: 'event', widget: 'text' }
+  - name: 'interview3'
+    label: 'Interview 3'
+    folder: 'src/data/posts/interview3'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'Interview3' }
+      - { label: 'Is Published', name: 'isPublished', widget: 'boolean', default: false }
+      - { label: 'Icon', name: 'icon', widget: 'image', required: false }
+      - { label: 'Publish Date', name: 'publishDate', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'text', required: false }
+      - { label: 'Is Show Description In Teaser', name: 'isShowDescriptionInTeaser', widget: 'boolean', default: false }
+      - { label: 'Lead', name: 'lead', widget: 'text' }
+      - { label: 'Author', name: 'author', widget: 'string' }
+      - { label: 'Photographer', name: 'photographer', widget: 'string', required: false }
+      - { label: 'Illustrator', name: 'illustrator', widget: 'string', required: false }
+      - { label: 'Image', name: 'image', widget: 'image', required: false }
+      - label: 'Tags'
+        name: 'tags'
+        widget: 'list'
+        fields:
+          - label: 'Tag'
+            name: 'tag'
+            widget: 'relation'
+            collection: 'tags'
+            searchFields: ['title', 'description']
+            valueField: 'title'
+            displayFields: ['title']
+      - label: 'Main tag'
+        name: 'mainTag'
+        widget: 'relation'
+        collection: 'tags'
+        searchFields: ['title', 'description']
+        valueField: 'title'
+        displayFields: ['title', 'description']
+      - label: 'SEO'
+        name: 'seo'
+        widget: 'object'
+        fields:
+          - { label: 'Description', name: 'description', widget: 'string', default: '' }
+          - { label: 'Keywords', name: 'keywords', widget: 'string', default: '' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Biography'
+        name: 'biography'
+        widget: 'object'
+        required: false
+        fields:
+          - { label: 'Title', name: 'title', widget: 'text' }
+          - label: 'Events'
+            name: 'events'
+            widget: 'list'
+            fields:
+              - { label: 'Year', name: 'year', widget: 'number' }
+              - { label: 'Event', name: 'event', widget: 'text' }
+  - name: 'masonries'
+    label: 'Masonries'
+    folder: 'src/data/posts/masonries'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'Masonry' }
+      - { label: 'Is Published', name: 'isPublished', widget: 'boolean', default: false }
+      - { label: 'Icon', name: 'icon', widget: 'image', required: false }
+      - { label: 'Publish Date', name: 'publishDate', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'text', required: false }
+      - { label: 'Is Show Description In Teaser', name: 'isShowDescriptionInTeaser', widget: 'boolean', default: false }
+      - { label: 'Lead', name: 'lead', widget: 'text' }
+      - { label: 'Photographer', name: 'photographer', widget: 'string', required: false }
+      - { label: 'Illustrator', name: 'illustrator', widget: 'string', required: false }
+      - { label: 'Image', name: 'image', widget: 'image', required: false }
+      - label: 'Tags'
+        name: 'tags'
+        widget: 'list'
+        fields:
+          - label: 'Tag'
+            name: 'tag'
+            widget: 'relation'
+            collection: 'tags'
+            searchFields: ['title', 'description']
+            valueField: 'title'
+            displayFields: ['title']
+      - label: 'Main tag'
+        name: 'mainTag'
+        widget: 'relation'
+        collection: 'tags'
+        searchFields: ['title', 'description']
+        valueField: 'title'
+        displayFields: ['title', 'description']
+      - label: 'SEO'
+        name: 'seo'
+        widget: 'object'
+        fields:
+          - { label: 'Description', name: 'description', widget: 'string', default: '' }
+          - { label: 'Keywords', name: 'keywords', widget: 'string', default: '' }
+      - label: 'Images'
+        name: 'images'
+        widget: 'list'
+        fields:
+          - { label: 'Image', name: 'image', widget: 'image' }
+          - { label: 'Alt', name: 'alt', widget: 'string', default: '' }
+          - { label: 'Caption', name: 'caption', widget: 'string', default: '' }
+          - { label: 'Width', name: 'width', widget: 'number' }
+          - { label: 'Height', name: 'height', widget: 'number' }
+  - name: 'news'
+    label: 'News'
+    folder: 'src/data/news'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'News' }
+      - { label: 'Description', name: 'description', widget: 'text' }
+      - { label: 'Is Published', name: 'isPublished', widget: 'boolean', default: false }
+      - { label: 'Publish Date', name: 'publishDate', widget: 'datetime' }
+      - { label: 'Image', name: 'image', widget: 'image' }
+      - { label: 'Author', name: 'author', widget: 'string' }
+      - { label: 'Photographer', name: 'photographer', widget: 'string', required: false }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'coverPlaces'
+    label: 'Cover Places'
+    folder: 'src/data/coverPlaces'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - label: 'Tag №'
+        name: 'title'
+        widget: 'string'
+      - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'CoverPlace' }
+      - label: 'Project'
+        name: 'project'
+        widget: 'relation'
+        collection: 'projects'
+        searchFields: ['title']
+        valueField: 'title'
+        displayFields: ['title']
+      - label: 'Video'
+        name: 'video'
+        widget: 'boolean'
+  - name: 'pages'
+    label: 'Pages'
+    files:
+      - file: 'src/data/pages/home.md'
+        label: 'Home'
+        name: 'home'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'Home' }
+          - label: 'SEO'
+            name: 'seo'
+            widget: 'object'
+            fields:
+              - { label: 'Description', name: 'description', widget: 'string', default: '' }
+              - { label: 'Keywords', name: 'keywords', widget: 'string', default: '' }
+          - label: 'Main Covers Block'
+            name: 'mainCoversBlock'
+            widget: 'object'
+            fields:
+              - label: 'Composition'
+                name: 'composition'
+                widget: 'select'
+                options: ['PJG', 'JGP', 'GPJ', 'PGJ', 'GJP', 'JPG']
+                default: 'PJG'
+              - label: 'Project'
+                name: 'project'
+                widget: 'relation'
+                collection: 'projects'
+                searchFields: ['title']
+                valueField: 'title'
+                displayFields: ['title']
+              - label: 'Journal'
+                name: 'journal'
+                widget: 'relation'
+                collection: 'journals'
+                searchFields: ['title']
+                valueField: 'title'
+                displayFields: ['title']
+              - label: 'Hot Guides'
+                name: 'hotGuides'
+                widget: 'list'
+                fields:
+                  - label: 'Guide'
+                    name: 'guide'
+                    widget: 'relation'
+                    collection: 'guides'
+                    searchFields: ['title']
+                    valueField: 'title'
+                    displayFields: ['title']
+          - label: 'Cover Places'
+            name: 'coverPlaces'
+            widget: 'list'
+            fields:
+              - label: 'Cover Place'
+                name: 'coverPlace'
+                widget: 'relation'
+                collection: 'coverPlaces'
+                searchFields: ['title']
+                valueField: 'title'
+                displayFields: ['title']
+      - file: 'src/data/pages/about.md'
+        label: 'About'
+        name: 'about'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'About' }
+          - { label: 'Description', name: 'description', widget: 'text' }
+          - label: 'SEO'
+            name: 'seo'
+            widget: 'object'
+            fields:
+              - { label: 'Description', name: 'description', widget: 'string', default: '' }
+              - { label: 'Keywords', name: 'keywords', widget: 'string', default: '' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+      - file: 'src/data/pages/contacts.md'
+        label: 'Contacts'
+        name: 'contacts'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'Contacts' }
+          - { label: 'Description', name: 'description', widget: 'text' }
+          - label: 'SEO'
+            name: 'seo'
+            widget: 'object'
+            fields:
+              - { label: 'Description', name: 'description', widget: 'string', default: '' }
+              - { label: 'Keywords', name: 'keywords', widget: 'string', default: '' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+      - file: 'src/data/pages/advertising.md'
+        label: 'Advertising'
+        name: 'advertising'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'Advertising' }
+          - { label: 'Description', name: 'description', widget: 'text' }
+          - label: 'SEO'
+            name: 'seo'
+            widget: 'object'
+            fields:
+              - { label: 'Description', name: 'description', widget: 'string', default: '' }
+              - { label: 'Keywords', name: 'keywords', widget: 'string', default: '' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+      - file: 'src/data/pages/legalInfo.md'
+        label: 'Legal Info'
+        name: 'legalInfo'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'LegalInfo' }
+          - { label: 'Description', name: 'description', widget: 'text' }
+          - label: 'SEO'
+            name: 'seo'
+            widget: 'object'
+            fields:
+              - { label: 'Description', name: 'description', widget: 'string', default: '' }
+              - { label: 'Keywords', name: 'keywords', widget: 'string', default: '' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+      - file: 'src/data/pages/guides.md'
+        label: 'Guides'
+        name: 'guides'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Path', name: 'path', widget: 'hidden', default: '/guides' }
+          - { label: 'Description', name: 'description', widget: 'string', required: false }
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'Guides' }
+          - { label: 'Background', name: 'background', widget: 'image', required: false }
+          - label: 'SEO'
+            name: 'seo'
+            widget: 'object'
+            fields:
+              - { label: 'Description', name: 'description', widget: 'string', default: '' }
+              - { label: 'Keywords', name: 'keywords', widget: 'string', default: '' }
+          - label: 'Color'
+            name: 'color'
+            widget: 'select'
+            options: ['white', 'black', 'blue', 'green', 'yellow', 'purple']
+            default: 'white'

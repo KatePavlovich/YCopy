@@ -1,0 +1,98 @@
+@import '../styles/typography';
+
+.root {
+  @include baseFont();
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  h1 {
+    font-size: 260px;
+    line-height: 1;
+    font-weight: bold;
+    text-align: center;
+
+    img {
+      display: inline;
+      width: 200px;
+      height: auto;
+      margin: 0 15px;
+      animation: spin 10s linear infinite;
+    }
+  }
+
+  p {
+    font-size: 25px;
+    text-align: center;
+    color: #ccc;
+  }
+
+  a {
+    font-size: 25px;
+    width: auto;
+    margin: 45px auto;
+    text-decoration: none;
+    background-color: rgb(16, 16, 16);
+    padding: 15px;
+    color: #fff;
+    text-align: center;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: lighten(rgb(16, 16, 16), 10%);
+    }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+@media (max-width: 1160px) {
+  .root {
+    h1 {
+      font-size: 160px;
+      img {
+        width: 120px;
+      }
+    }
+
+    p {
+      font-size: 20px;
+    }
+
+    a {
+      width: auto;
+      font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: 730px) {
+  .root {
+    h1 {
+      font-size: 64px;
+      img {
+        width: 50px;
+        margin: 0 5px;
+      }
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    a {
+      font-size: 14px;
+    }
+  }
+}

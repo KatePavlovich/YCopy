@@ -1,0 +1,46 @@
+@import '../../styles/typography';
+
+.root {
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 768px) {
+    flex-direction: row;
+    align-items: baseline;
+  }
+}
+
+.title {
+  @include baseFont;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (max-width: 768px) {
+    margin-left: 10px;
+  }
+}
+
+.item,
+.item a {
+  @include baseFont;
+  font-weight: 400;
+  font-size: 16px;
+  display: inline;
+  color: #808080;
+  text-transform: uppercase;
+  text-decoration: none;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.item:not(:last-child):after {
+  content: ', ';
+}

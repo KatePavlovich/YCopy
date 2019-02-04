@@ -1,0 +1,305 @@
+@import '../../styles/typography';
+@import '../../styles/vars';
+
+/* General
+----------------------------------------------------------------------------------------------------*/
+
+.root {
+  background: #fff;
+  padding: 20px 0;
+  @include centeredPage;
+
+  /* Lists
+----------------------------------------------------------------------------------------------------*/
+
+  li {
+    @include articleFont();
+    font-weight: 400;
+    font-size: 18px;
+    @media (max-width: 1000px) {
+      font-size: 16px;
+    }
+  }
+}
+
+.root img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Header
+----------------------------------------------------------------------------------------------------*/
+
+.header {
+  overflow-x: hidden;
+
+  @media (max-width: 768px) {
+    margin-bottom: 20px;
+  }
+}
+
+.header img {
+  width: 100%;
+  max-width: none;
+}
+
+.header h1 {
+  @include baseTitle();
+  color: #000;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+/* Meta
+----------------------------------------------------------------------------------------------------*/
+
+.meta {
+  margin: 20px 8px;
+  p {
+    @include accentFont;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    strong {
+      @include baseFont;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1;
+      display: inline-block;
+      font-style: normal;
+    }
+  }
+
+  span {
+    display: block;
+
+    @media (max-width: 1000px) {
+      display: inline-block;
+      margin-left: 10px;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .meta {
+    float: left;
+    width: 20%;
+    margin: 0;
+    padding: 0 50px;
+    box-sizing: border-box;
+  }
+}
+
+p.mainTag,
+p.publishDate {
+  @include accentFont;
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-style: normal;
+}
+
+.mainTag,
+.publishDate {
+  margin: 0;
+}
+
+.mainTag {
+  padding: 0;
+  color: #9d3dc2;
+  a {
+    color: #9d3dc2;
+    text-decoration: none;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+/* Intro
+----------------------------------------------------------------------------------------------------*/
+
+.intro {
+  @include interviewLead;
+  color: #9d3dc2;
+  padding-bottom: 30px;
+  margin: 30px 8px;
+  border-bottom: 3px solid;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .intro {
+    margin: 15px 20% 0 20%;
+  }
+}
+
+/* Conversation
+----------------------------------------------------------------------------------------------------*/
+
+.conversation p,
+.conversation blockquote {
+  margin: 30px 0;
+}
+
+.conversation p {
+  @include baseArticle;
+  @media (max-width: 768px) {
+    font-size: 16px;
+    margin: 14px 0;
+  }
+}
+
+.conversation blockquote {
+  color: #9d3dc2;
+  border: none;
+  padding-left: 35px;
+  padding-right: 35px;
+  margin-top: -10px;
+  margin-bottom: -10px;
+
+  @media (max-width: 768px) {
+    margin: 0;
+  }
+}
+
+.conversation blockquote p {
+  @include baseQuote();
+}
+
+.conversation {
+  strong {
+    @include baseFont;
+    font-weight: bold;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+
+  em {
+    @include articleFont();
+    font-style: italic;
+    font-size: 18px;
+
+    & > * {
+      @include articleFont();
+    }
+
+    strong {
+      font-weight: bold;
+      color: #000;
+    }
+  }
+}
+
+.conversation {
+  img {
+    max-height: 650px;
+    width: 100%;
+    object-fit: contain;
+    background-color: #f2f2f2;
+
+    @media (max-width: 1000px) {
+      max-width: initial;
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      margin-left: -50vw;
+      background-color: #fff;
+    }
+  }
+}
+
+/* Center Col
+----------------------------------------------------------------------------------------------------*/
+
+.header,
+.conversation {
+  padding: 0 8px;
+}
+
+.header img,
+.conversation :global(.yo-gallery) {
+  margin-left: calc(-10 / 8 * 10%);
+  width: calc(10 / 8 * 100%);
+}
+
+@media (min-width: 1000px) {
+  .header,
+  .conversation {
+    padding: 0 20%;
+  }
+
+  .header img,
+  .conversation :global(.yo-gallery) {
+    margin-left: calc(-10 / 6 * 20%);
+    width: calc(10 / 6 * 100%);
+  }
+}
+
+/* Person Timeline
+----------------------------------------------------------------------------------------------------*/
+
+.biography {
+  margin: 40px 10%;
+}
+
+@media (min-width: 1000px) {
+  .biography {
+    margin: 40px 20%;
+  }
+}
+
+/* Social Share
+----------------------------------------------------------------------------------------------------*/
+
+.socialShare {
+  text-align: center;
+  margin: 40px 0;
+}
+
+/* Tags
+----------------------------------------------------------------------------------------------------*/
+
+.tags {
+  @include baseFont();
+  margin: 25px 8px;
+}
+
+@media (min-width: 1000px) {
+  .tags {
+    margin: 40px 20%;
+  }
+}
+
+/* More
+----------------------------------------------------------------------------------------------------*/
+
+.renderMore {
+  background-color: #f2f2f2;
+}
+
+/* Description to photo
+----------------------------------------------------------------------------------------------------*/
+
+.photoDescription {
+  @include accentFont();
+  font-weight: 400;
+  font-style: italic;
+  flex: 18px;
+  line-height: 1.5;
+}
+
+.hr {
+  margin: 0 20%;
+  border: 0;
+  border-top: thin solid #a0a3a5;
+
+  @media (max-width: 1000px) {
+    margin: 0 8px;
+  }
+}

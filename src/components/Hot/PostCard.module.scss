@@ -1,0 +1,79 @@
+@import '../../styles/typography';
+@import '../../styles/vars';
+
+.card {
+  margin-left: 2%;
+  text-decoration: none;
+  transition: opacity 0.15s;
+  cursor: pointer;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 0;
+  padding: 16px;
+  position: relative;
+  width: 31.3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:hover {
+    opacity: 0.3;
+  }
+
+  @media (max-width: 768px) {
+    border: 0;
+    border-top: thin solid #fff;
+    width: 94%;
+    margin-left: 0;
+
+    &:first-child {
+      border: 0;
+    }
+
+    @media (orientation: landscape) {
+      width: 100%;
+      padding-right: 6%;
+    }
+  }
+
+  @media (max-width: 375px) {
+    width: 93%;
+  }
+}
+
+.title {
+  @include accentFont();
+  font-size: 23px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+.description {
+  @include baseDescription();
+  margin-top: 8px;
+  margin-bottom: 24px;
+  flex-grow: 1;
+  @media (max-width: 768px) {
+    font-size: 18px;
+    line-height: 20px;
+    margin-top: 8px;
+    margin-bottom: 24px;
+  }
+}
+
+.meta {
+  @include baseTag();
+}

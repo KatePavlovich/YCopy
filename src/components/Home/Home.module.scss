@@ -1,0 +1,19 @@
+.main {
+  -webkit-font-smoothing: antialiased;
+  padding: 0;
+  overflow-x: hidden;
+  position: relative;
+  z-index: 5;
+  background-color: #f2f2f2;
+
+  &:after {
+    content: '';
+    height: 1px;
+    display: block;
+    margin-top: -1px;
+  }
+}
+
+.mainCoversBlock {
+  padding-top: 20px;
+}

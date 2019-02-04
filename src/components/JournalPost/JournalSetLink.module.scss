@@ -1,0 +1,19 @@
+@import '../../styles/typography';
+
+.root {
+  @include accentFont;
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-style: normal;
+  color: red;
+  text-decoration: none;
+  display: inline-block;
+  @media (min-width: 1000px) {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+}

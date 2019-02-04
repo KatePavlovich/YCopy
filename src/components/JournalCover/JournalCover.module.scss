@@ -1,0 +1,265 @@
+@import '../../styles/typography';
+@import '../../styles/vars';
+
+.root {
+  box-sizing: border-box;
+  position: relative;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 40px 20px;
+  min-height: 480px;
+  @include centeredPage;
+
+  > header {
+    position: relative;
+    z-index: 5;
+  }
+
+  @media (max-width: 1260px) {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 568px;
+    min-height: initial;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    background-color: rebeccapurple;
+  }
+
+  @media (max-width: 589px) {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+
+  &:after {
+    width: 100%;
+    height: 50%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.5) 100%);
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+}
+
+.title {
+  @include baseTitle();
+  margin: 0;
+  a {
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 32px;
+    width: 90%;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 15px;
+  }
+}
+
+.description {
+  @include baseDescription();
+  color: #cc1719;
+  margin: 20px 0 80px 0;
+  width: 90%;
+  @media (max-width: 768px) {
+    width: 80%;
+    margin-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.cover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  object-fit: cover;
+  display: block;
+
+  @media (max-width: 768px) {
+    position: initial;
+    height: 200px;
+    max-width: 100%;
+  }
+}
+
+.label {
+  @include accentFont();
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #cc1719;
+  color: #fff;
+  display: inline-block;
+  min-width: 210px;
+  height: 18px;
+  padding: 10px 12px;
+  transform: rotate(90deg);
+  transform-origin: 75px 75px;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: -84px;
+  text-align: center;
+
+  @media (min-width: 800px) {
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    transform: rotate(0);
+    right: 0;
+    font-size: 14px;
+    height: auto;
+    min-width: initial;
+  }
+
+  &:hover {
+    background-color: #e60000;
+  }
+}
+
+.articles {
+  position: relative;
+  z-index: 10;
+  color: #fff;
+  margin: 225px 0 0 0;
+  padding: 0;
+  list-style: none;
+  max-width: 80%;
+
+  li {
+    display: inline;
+
+    &:not(:first-child):before {
+      content: '/';
+      margin: 0 0.25em;
+    }
+  }
+
+  a {
+    @include secondaryTitle();
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      color: #cc1719;
+    }
+  }
+
+  @media (max-width: 768px) {
+    a {
+      font-size: 16px;
+    }
+
+    margin-top: 0;
+    max-width: 100%;
+    padding: 0 20px 20px 20px;
+  }
+}
+
+.isInJournal {
+  margin-top: 20px;
+
+  @media (max-width: 1260px) {
+    max-width: initial;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  @media (max-width: 1200px) {
+    max-width: initial;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+
+  @media (max-width: 768px) {
+    min-height: initial;
+    padding-bottom: 5px;
+    margin-bottom: 0;
+  }
+}
+
+.white {
+  background-color: #fff;
+}
+
+.black {
+  background-color: #000;
+}
+
+.blue {
+  background-color: #4d4dff;
+}
+
+.green {
+  background-color: #66cc02;
+}
+
+.yellow {
+  background-color: #e6c000;
+}
+
+.purple {
+  background-color: rebeccapurple;
+}
+
+.coverWhite {
+  header {
+    h1 {
+      color: #fff;
+    }
+  }
+
+  h1 {
+    a {
+      color: #fff;
+      &:hover {
+        color: #cc1719;
+      }
+    }
+  }
+
+  h2 {
+    color: #fff;
+  }
+  &::after {
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+.coverRed {
+  header {
+    h1 {
+      color: #cc1719;
+    }
+  }
+
+  h1 {
+    a {
+      color: #cc1719;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  h2 {
+    color: #cc1719;
+  }
+}

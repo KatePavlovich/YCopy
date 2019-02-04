@@ -1,0 +1,7 @@
+$pageMaxWidth: 1200px;
+
+@mixin centeredPage {
+  max-width: $pageMaxWidth;
+  margin-right: auto;
+  margin-left: auto;
+}

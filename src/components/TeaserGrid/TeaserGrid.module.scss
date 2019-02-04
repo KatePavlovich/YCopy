@@ -1,0 +1,210 @@
+@import '../../styles/typography';
+@import '../../styles/vars';
+
+.root {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: initial;
+  overflow-x: hidden;
+
+  .inner {
+    box-sizing: border-box;
+    @include centeredPage;
+
+    @media (max-width: 1260px) {
+      margin-left: 16px;
+      margin-right: 16px;
+    }
+
+    @media (max-width: 768px) {
+      max-width: 568px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (max-width: 589px) {
+      max-width: 568px;
+      margin-left: 8px;
+      margin-right: 32px;
+    }
+  }
+}
+
+.header {
+  margin-bottom: 20px;
+
+  h1 {
+    @include sectionTitle();
+    margin: 20px 0;
+  }
+
+  h2 {
+    @include secondaryTitle();
+    margin: 20px 0;
+  }
+
+  a {
+    text-decoration: none;
+    display: inline-block;
+  }
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.modBg {
+  padding: 5px 0 0;
+}
+
+.items {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: -12px;
+  margin-left: -12px;
+
+  * > {
+    box-sizing: border-box;
+  }
+}
+
+.itemInRow2 {
+  width: calc(100% / 2 - 24px) !important;
+  max-width: initial;
+}
+
+.itemInRow3 {
+  width: calc(100% / 3 - 24px) !important;
+  max-width: initial;
+}
+
+.itemInRow4 {
+  width: calc(100% / 4 - 24px) !important;
+  max-width: initial;
+}
+
+.item {
+  // max-width: 384px;
+  display: inline-block;
+  padding: 0 12px;
+  padding-bottom: 24px;
+
+  @media (max-width: 768px) {
+    width: 100% !important;
+    max-width: 568px !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.modTypeCA {
+  h1 {
+    color: #333;
+  }
+
+  .black {
+    h1 {
+      color: #000;
+    }
+  }
+
+  .red {
+    h1 {
+      color: red;
+    }
+  }
+
+  .orange {
+    h1 {
+      color: orange;
+    }
+  }
+
+  .yellow {
+    h1 {
+      color: #ffff00;
+    }
+  }
+
+  .green {
+    h1 {
+      color: #9c0;
+    }
+  }
+
+  .blue {
+    h1 {
+      color: #0346fa;
+    }
+  }
+
+  .indigo {
+    h1 {
+      color: indigo;
+    }
+  }
+
+  .violet {
+    h1 {
+      color: violet;
+    }
+  }
+}
+
+.isInJournalSet {
+  .item {
+    max-width: initial;
+    padding: 0;
+
+    @media (max-width: 1260px) {
+      width: 100% !important;
+      max-width: initial;
+    }
+  }
+
+  .inner {
+    @media (max-width: 589px) {
+      margin-right: 8px;
+    }
+  }
+}
+
+// Default pages
+
+.isRenderMore {
+  background-color: #f2f2f2;
+  margin-top: 15px;
+  margin-bottom: -100px;
+}
+
+// Interviews
+
+.isInterview1RenderMore {
+  margin-bottom: -40px;
+  background-color: #f2f2f2;
+
+  &:first-of-type {
+    header {
+      margin: 15px 0 5px 0;
+      h1 {
+        margin: 5px 0;
+      }
+    }
+  }
+}
+
+.isInterview2RenderMore {
+  @extend .isInterview1RenderMore;
+  margin-bottom: -30px;
+}
+
+.isInterview3RenderMore {
+  @extend .isInterview1RenderMore;
+}

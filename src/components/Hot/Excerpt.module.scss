@@ -1,0 +1,45 @@
+@import '../../styles/typography';
+@import '../../styles/vars';
+
+.wrapper {
+  display: flex;
+
+  @media (max-width: 768px) {
+    display: block;
+    padding-top: 160px;
+    margin: 0 8px 80px;
+  }
+}
+
+.content {
+  display: block;
+  text-decoration: none;
+  width: 60%;
+  position: relative;
+  z-index: 1;
+  padding-top: 15vh;
+  transition: opacity 0.15s;
+
+  &:hover {
+    opacity: 0.75;
+  }
+
+  @media (max-width: 768px) {
+    padding-top: 5vh;
+  }
+
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
+}
+
+.title {
+  @include baseTitle();
+  color: #fff;
+}
+
+.description {
+  @include baseDescription();
+  color: #fff;
+  width: 60%;
+}

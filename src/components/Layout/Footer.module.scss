@@ -1,0 +1,150 @@
+@import '../../styles/vars';
+@import '../../styles/typography';
+
+.root {
+  @include baseFont();
+  font-size: 14px;
+  font-weight: 300;
+  background: #434a54;
+  color: #fff;
+  line-height: 30px;
+  text-align: center;
+
+  position: relative;
+  z-index: 0;
+
+  min-height: 270px;
+  display: flex;
+  justify-content: center;
+
+  &:before {
+    content: '';
+    width: 100%;
+    height: 25px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  @media (max-width: 900px) {
+    min-height: 680px;
+  }
+
+  header {
+    @media (max-width: 320px) {
+      display: none;
+    }
+  }
+}
+
+.root > * {
+  box-sizing: border-box;
+}
+
+.inner {
+  width: 100%;
+  max-width: $pageMaxWidth;
+  padding: 50px 0;
+  position: fixed;
+  bottom: 0;
+  z-index: -1;
+
+  @media (max-width: 320px) {
+    padding: 35px 0;
+  }
+}
+
+.normal {
+  min-height: auto;
+  padding: 20px calc(50% - #{$pageMaxWidth} / 2);
+  .inner {
+    position: static;
+  }
+}
+
+.root > * + * {
+  margin-top: 30px;
+}
+
+.root a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.root a:hover {
+  text-decoration: underline;
+}
+
+.root ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.logo {
+  width: 170px;
+  fill: #fff;
+  -webkit-filter: brightness(5);
+  filter: brightness(5);
+}
+
+.links {
+  text-transform: uppercase;
+  margin-top: 30px;
+  @media (min-width: 900px) {
+    margin-top: 0;
+  }
+}
+
+.email {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.development {
+  text-transform: none;
+  font-size: 14px;
+  margin-top: 10px;
+  a {
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+      color: red;
+    }
+  }
+}
+
+header {
+  h4 {
+    margin: 0;
+    font-weight: normal;
+    font-size: 16px;
+  }
+}
+
+// Normal state
+
+@media (min-width: 900px) {
+  .inner {
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+  }
+}
+
+@media (min-width: 1400px) {
+  .inner {
+    justify-content: space-between;
+  }
+}
+
+// Blocks visibility depends on breakpoints
+
+.visibleSm {
+  display: none;
+
+  @media (max-width: 320px) {
+    display: inline-block;
+  }
+}

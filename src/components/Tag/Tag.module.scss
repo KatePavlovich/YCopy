@@ -1,0 +1,12 @@
+@import '../../styles/vars';
+
+.root {
+  // max-width: $pageMaxWidth;
+  // margin: 0 auto 20px auto;
+  // @media (max-width: 1200px) {
+  //   margin-left: 8px;
+  //   margin-right: 8px;
+  // }
+  background: linear-gradient(#fff 20%, #f2f2f2);
+  box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.03);
+}
