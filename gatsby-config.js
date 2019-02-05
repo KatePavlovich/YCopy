@@ -103,7 +103,6 @@ module.exports = {
       options: {
         logo: './src/favicons/yolife-favicon.png',
 
-        // WebApp Manifest Configuration
         appName: 'Yolife.is',
         appDescription: 'Yolife.is',
         developerName: 'HUMANSEE LABS',
